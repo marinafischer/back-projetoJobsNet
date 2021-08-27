@@ -12,6 +12,4 @@ app.use(cors())
 app.use(express.json());
 app.use('/docs', swaggerUI.serve, swaggerUI.setup(swaggerDocs));
 app.use(routes);
-app.listen('3300', () => {
-    console.log('rodando na porta 3300');
-});
+app.listen(process.env.PORT || 3300);
