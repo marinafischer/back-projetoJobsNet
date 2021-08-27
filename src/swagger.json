@@ -1,0 +1,122 @@
+{
+    "openapi": "3.0.0",
+
+    "info": {
+        "title": "API para o projeto jobnet gama academy",
+        "description": "API criada como parte dos requisitos para o programa gama academy",
+        "version": "0.0.1"
+    },
+
+    "servers": [
+        {
+        "url" : "http://localhost:3300",
+        "description" : "ambiente de desenvolvmento"
+        }
+    ],
+
+    "paths" :{
+        "/register": {
+            "post": {
+                "summary": "Cadastro de candidato",
+                "description": "Rota de cadastro de usuário; recebe: nome, cargo, dataNascimento, sexo, estadoCivil, CEP, endereco, numero, cidade, bairro, estado, fone1, fone2, celular, contato, email, identidade, cpf, veiculo, habilitacao",
+                "tags": ["candidato"],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "nome": {
+                                        "type": "string"
+                                    },
+                                    "cargo": { 
+                                        "type": "String"
+                                    },
+                                    "dataNascimento": { 
+                                        "type": "String"
+                                    },                                    
+                                    "sexo": { 
+                                        "type": "String" 
+                                    },
+                                    "estadoCivil": { 
+                                        "type": "String" 
+                                    },
+                                    "CEP": { 
+                                        "type": "Number"
+                                    }, 
+                                    "endereco": { 
+                                        "type": "String" 
+                                    }, 
+                                    "numero": { 
+                                        "type": "Number"
+                                    }, 
+                                    "cidade": { 
+                                        "type": "String" 
+                                    }, 
+                                    "bairro": { 
+                                        "type": "String" 
+                                    },
+                                    "estado": { 
+                                        "type": "String" 
+                                    }, 
+                                    "fone1": { 
+                                        "type": "Number"
+                                    }, 
+                                    "fone2": { 
+                                        "type": "Number"
+                                    }, 
+                                    "celular": { 
+                                        "type": "Number"
+                                    }, 
+                                    "contato": { 
+                                        "type": "String"
+                                    }, 
+                                    "email": { 
+                                        "type": "String"
+                                    }, 
+                                    "identidade": { 
+                                        "type": "Number"
+                                    }, 
+                                    "cpf": { 
+                                        "type": "Number"
+                                    },                                     
+                                    "veiculo": { 
+                                        "type": "String" 
+                                    }, 
+                                    "habilitacao": { 
+                                        "type": "String" 
+                                    }
+                                }
+                            },
+                            "examples": {
+                                "JoãoNinguém" :{
+                                    "value": {
+                                        "nome": "João Silva",                                     
+                                        "cargo": "Gestor Administrativo",                                     
+                                        "dataNascimento": "020101",                                     
+                                        "sexo": "Feminino",                                       
+                                        "estadoCivil": "Solteirx",                                      
+                                        "CEP": "00000000",                                      
+                                        "endereco": "Rua das Laranjeiras",                                      
+                                        "numero": "1234",                                       
+                                        "cidade": "Frutas",                                       
+                                        "bairro":  "Arvores",  
+                                        "estado": "Estado das plantas",                                   
+                                        "fone1": "5555555555",                                      
+                                        "fone2": "4444444444",                                      
+                                        "celular":  "6666666666",                                     
+                                        "contato": "João Silva",                                      
+                                        "email": "joao.silva@gmail.com",                                      
+                                        "identidade":  "9999999999",                                     
+                                        "cpf":  "88888888888",                                     
+                                        "veiculo":  "S",                                     
+                                        "habilitacao": "S"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
