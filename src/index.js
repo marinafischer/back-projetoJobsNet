@@ -13,4 +13,3 @@ app.use(express.json());
 app.use('/docs', swaggerUI.serve, swaggerUI.setup(swaggerDocs));
 app.use(routes);
 app.listen(process.env.PORT || 3300);
-//teste de arquivo
